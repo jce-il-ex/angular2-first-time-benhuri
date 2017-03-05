@@ -1,0 +1,36 @@
+[debug] ----------------------------------------------------------------------
+[debug] Command:      C:\Program Files\nodejs\node.exe C:\Users\bhuri\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy --debug
+[debug] CLI Version:  3.4.0
+[debug] Platform:     win32
+[debug] Node Version: v6.10.0
+[debug] Time:         Sun Mar 05 2017 20:59:36 GMT+0200 (Jerusalem Standard Time)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[debug] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase"]
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/github-ex1  
+ Sun Mar 05 2017 20:59:37 GMT+0200 (Jerusalem Standard Time)
+[debug] <<< HTTP RESPONSE 200
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/github-ex1/tokens  
+ Sun Mar 05 2017 20:59:38 GMT+0200 (Jerusalem Standard Time)
+[debug] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'github-ex1'...
+[info] 
+[info] i  deploying database, hosting
+[info] +  database: rules ready to deploy.
+[info] i  hosting: preparing dist directory for upload...
+[debug] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/github-ex1/uploads/-KeUprMfugAV1979gbuW?fileCount=1&message=  
+ Sun Mar 05 2017 20:59:42 GMT+0200 (Jerusalem Standard Time)
+[debug] <<< HTTP RESPONSE 200
+[info] +  hosting: dist folder uploaded successfully
+[info] +  hosting: 1 files uploaded successfully
+[info] i  starting release process (may take several minutes)...
+[debug] >>> HTTP REQUEST POST https://deploy.firebase.com/v1/projects/github-ex1/releases { database: { rulesString: '{\n  "rules": {\n    ".read": "auth != null",\n    ".write": "auth != null"\n  }\n}' },
+  hosting: 
+   { public: 'dist',
+     rewrites: [ [Object] ],
+     version: '-KeUprMfugAV1979gbuW',
+     prefix: '-KeUprMfugAV1979gbuW/',
+     manifest: [] } } 
+ Sun Mar 05 2017 20:59:43 GMT+0200 (Jerusalem Standard Time)
+[debug] <<< HTTP RESPONSE 200
